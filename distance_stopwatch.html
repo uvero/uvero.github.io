@@ -69,13 +69,19 @@
 	}
 
 	function fReset() {
+		fStop();
+		$("#results").html("0 meters");
+	}
+	
+	function fStop() {
 		if (running) {
 			running = false;
 			window.clearInterval(timer);
 		}
 		initialLength = 0;
-		$("#results").html("0 meters");
 	}
+	
+	
 </script>
 
 <style>
@@ -109,6 +115,9 @@ div#results {
 					value="Start / Pause / Continue" type="button" /> <input
 					class="b btn btn-primary" onclick="fReset()" type="button"
 					value="Reset" />
+					 <input
+					class="b btn btn-primary" onclick="fStop()" type="button"
+					value="Stop" />
 			</div>
 		</div>
 	</form>
