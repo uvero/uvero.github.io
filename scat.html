@@ -1,20 +1,20 @@
 <html>
 <head>
 <script>
-var let = "אבגדהוזחטיכלמנסעפצקשרת".split("") ;
-var cats = "ארץ עיר חי צומח דומם ילד ילדה מקצוע אישיות".split("");
+var lets = "אבגדהוזחטיכלמנסעפצקשרת".split("") ;
+var cats = " ארץ עיר חי צומח דומם ילד ילדה מקצוע אישיות".split("");
 function r(arr){
 var u = arr.length;
 var i = Math.round(Math.random()*u);
 return arr[i];
 } 
 function f(){
-var str = r(cats) + "" + r(let);
+var str = r(cats) + "" + r(lets);
 document.getElementById("main").innerHTML = str;
 }
 </script>
-<body>
-<h1 id="main"></h1>
+<body  style="font-size: xx-large;" onload="f()">
+<h1 id="main" style="font-size: xx-large;" ></h1>
 <button onclick="f()">again</button>
 </body>
 </html>
